@@ -53,7 +53,7 @@
     color: #333;
     margin-bottom: 0;
     text-align: center;
-    padding-left: 50%;
+    padding-left: 10px;
   }
 
   /* Content styles */
@@ -102,29 +102,6 @@
     margin: 0 -10px;
   }
 
-  .column {
-    flex-basis: 50%;
-    padding: 10px;
-  }
-
-  .column div {
-    text-align: center;
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-
-  .column div:hover {
-    background-color: #e1e1e1;
-  }
-
-  .column img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
   /* Container styles */
   .container {
     position: fixed;
@@ -139,37 +116,6 @@
     width: 60px;
     height: auto;
     margin-right: 10px;
-  }
-
-  .text {
-    font-size: 18px;
-    color: #333;
-    align-self: center;
-  }
-
-  /* Snackbar styles */
-  #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-    font-size: 16px;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-
-  #snackbar.show {
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 0.5s linear;
   }
 </style>
 
