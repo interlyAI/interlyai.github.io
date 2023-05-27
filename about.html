@@ -4,34 +4,256 @@
 <title>Interly.ai</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/index.css">
 
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  .right {
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* Content */
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .content hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .content p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .reports {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 -10px;
+  }
+
+  .column {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+
+  .column div {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .column div:hover {
+    background-color: #e1e1e1;
+  }
+
+  .column img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .file {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  /* Container */
+  .container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .text {
+    font-size: 18px;
+    color: #333;
+    align-self: center;
+  }
+
+  /* Snackbar */
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
+  #snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+</style>
+
+<script>
+  function snackbar() {
+    var snackbar = document.getElementById("snackbar");
+    snackbar.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1000);
+  }
+</script>
 </head>
 <body>
 
 <div class="navbar">
   <a href="#" class="navbar-brand">Interly.ai</a>
-  <a href="index.html" class="nav-link">Home</a>
-  <a href="about.html" class="selected">About Us</a>
+  <a href="#" class="selected">Home</a>
+  <a href="about.html" class="nav-link">About Us</a>
   <a href="logbooks.html" class="nav-link">LogBooks</a>
   <a href="https://github.com/interlyAI" class="right">Github Page &#128279</a>
 </div>
 
 <div class="content">
+  <h2>Interly.ai</h2>
+  <hr>
+  <p>
+    In today's digital world, online interviews have become a common practice in the recruitment process.
+    However, evaluating interviewees’ emotional state, anxiety levels, and honesty during these remote interviews
+    can be challenging for interviewers. To address this issue, we present a web application that integrates with
+    the Jitsi video conferencing platform to provide real-time emotional analysis, anxiety analysis, and deception
+    analysis of interviewees. Our approach leverages Convolutional Neural Networks (CNNs) to model facial expressions
+    in order to interpret the mental state exhibited by the interviewees. By analyzing facial signals, we aim to enhance
+    the evaluation process and provide valuable insights to interviewers.
+  </p>
+  <hr>
 
-  <div style="text-align: center;">
-      <h2>Development Team</h2>
-      <hr>
-      <div style="padding-top: 1%;">
-          <h2>Members</h2>
-          <p>Arda Serim <a href="https://tr.linkedin.com/in/arda-serim"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></p>
-          <p>Erhan Er <a href="https://tr.linkedin.com/in/erhan-er-2474ab1b6"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></p>
-          <p>Furkan Turunç <a href="https://tr.linkedin.com/in/furkan-turun%C3%A7-5853861b4"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></p>
-          <p>Murat Furkan Uğurlu <a href="https://tr.linkedin.com/in/murat-furkan-u%C4%9Furlu-b064a41b6"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></p>
-          <p>Osman Semih Tiryaki <a href="https://tr.linkedin.com/in/osman-semih-tiryaki-373538233"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></p>
+  <h2 class="reports">REPORTS</h2>
+  <div class="row">
+    <div class="column">
+      <div>
+        <a href="docs/Bitirme_Project_Specification_Report.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">Project Specification Report</p>
       </div>
+    </div>
+    <div class="column">
+      <div>
+        <a href="docs/T2318_Analysis_Requirements_Report.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">Analysis and Requirements Report</p>
+      </div>
+    </div>
+    <div class="column">
+      <div>
+        <a href="docs/CS491_Presentation.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">First Presentation</p>
+      </div>
+    </div>
+    <div class="column">
+      <div>
+        <a href="docs/T2318_Detailed_Design_Report.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">Detailed Design Report</p>
+      </div>
+    </div>
+    <div class="column">
+      <div>
+        <a href="docs/T2318_FinalReport.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">Final Report</p>
+      </div>
+    </div>
+    <div class="column">
+      <div>
+        <a href="docs/CS492_Final_Presentation.pdf"><img src="images/document-icon.png" alt="pdf"></a>
+        <p class="file">Final Presentation</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="snackbar">Not yet uploaded!</div>
+
+  <div class="container">
+    <img src="images/bilkent-amblem.png" alt="Bilkent Logo" class="logo">
+    <span class="text">Bilkent University</span>
   </div>
 </div>
+
 </body>
 </html>
