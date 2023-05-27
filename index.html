@@ -14,7 +14,7 @@
     background-color: #f5f5f5;
   }
 
-  /* Navbar */
+  /* Navbar styles */
   .navbar {
     background-color: #333;
     color: #fff;
@@ -48,7 +48,7 @@
     font-size: 18px;
   }
 
-  /* Content */
+  /* Content styles */
   .content {
     max-width: 800px;
     margin: 0 auto;
@@ -95,7 +95,7 @@
   }
 
   .column {
-    width: 50%;
+    flex-basis: 50%;
     padding: 10px;
   }
 
@@ -123,7 +123,7 @@
     margin-bottom: 0;
   }
 
-  /* Container */
+  /* Container styles */
   .container {
     position: fixed;
     bottom: 0;
@@ -131,7 +131,6 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -143,10 +142,11 @@
 
   .text {
     font-size: 18px;
+    color: #333;
     align-self: center;
   }
 
-  /* Snackbar */
+  /* Snackbar styles */
   #snackbar {
     visibility: hidden;
     min-width: 250px;
@@ -173,13 +173,13 @@
 </style>
 
 <script>
-function snackbar() {
-  var snackbar = document.getElementById("snackbar");
-  snackbar.className = "show";
+  function snackbar() {
+    var snackbar = document.getElementById("snackbar");
+    snackbar.className = "show";
 
-  // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1000);
-}
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1000);
+  }
 </script>
 </head>
 <body>
@@ -196,13 +196,13 @@ function snackbar() {
   <h2>Interly.ai</h2>
   <hr>
   <p>
-    In today's digital world, online interviews have become a common practice in the recruitment process. 
-    However, evaluating interviewees’ emotional state, anxiety levels, and honesty during these remote interviews 
-    can be challenging for interviewers. To address this issue, we present a web application that integrates with 
-    the Jitsi video conferencing platform to provide real-time emotional analysis, anxiety analysis, and deception 
-    analysis of interviewees. Our approach leverages Convolutional Neural Networks (CNNs) to model facial expressions 
+    In today's digital world, online interviews have become a common practice in the recruitment process.
+    However, evaluating interviewees’ emotional state, anxiety levels, and honesty during these remote interviews
+    can be challenging for interviewers. To address this issue, we present a web application that integrates with
+    the Jitsi video conferencing platform to provide real-time emotional analysis, anxiety analysis, and deception
+    analysis of interviewees. Our approach leverages Convolutional Neural Networks (CNNs) to model facial expressions
     in order to interpret the mental state exhibited by the interviewees. By analyzing facial signals, we aim to enhance
-    the evaluation process and provide valuable insights to interviewers. 
+    the evaluation process and provide valuable insights to interviewers.
   </p>
   <hr>
 
