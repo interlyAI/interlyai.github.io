@@ -15,6 +15,29 @@ function snackbar() {
   setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1000);
 }
 </script>
+  
+<style>
+  .container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      background-color: #f1f1f1;
+    }
+    
+    .logo {
+      width: 50px; /* Adjust the width of the logo as needed */
+      height: auto;
+      margin-right: 10px;
+    }
+    
+    .text {
+      font-weight: bold;
+      font-size: 30px; /* Adjust the font size as needed */
+    }
+</style>
 
 </head>
 <body>
@@ -83,9 +106,9 @@ function snackbar() {
         </div>
       </div>
       <div id="snackbar">Not yet uploaded!</div>
-      <div>
-        <img src="images/bilkent-amblem.png" alt="bilkentemblem" class="bilkent_emblem" style='float: left;'>
-        <p style="font-size: 30px; color: black; bottom: 0%;">Bilkent University</p>
+      <div class="container">
+        <img src="images/bilkent-amblem.png" alt="Bilkent Logo" class="logo">
+        <span class="text">Bilkent University</span>
       </div>
     </div>
     
